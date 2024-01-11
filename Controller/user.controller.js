@@ -1,6 +1,6 @@
 const { UserModal } = require("../Modal/user.modal");
 const jwt = require("jsonwebtoken");
-const bcrypt = require("bcrypt");
+const bcrypt = require("bcryptjs");
 const secret = process.env.SECRET;
 const Register = async(req,res)=>{
     const {email,password}= req.body;
