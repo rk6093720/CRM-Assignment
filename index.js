@@ -4,8 +4,9 @@ const { UserRouter } = require("./Routes/user.routes");
 const { employeeRouter } = require("./Routes/employee.routes");
 require("dotenv").config();
 const app = express();
-app.use(express.json());
 const port = process.env.PORT || 8080;
+app.use(cors());
+app.use(express.json());
 app.use("/auth",UserRouter);
 app.use("/employee",employeeRouter)
 app.listen(port, async()=>{
